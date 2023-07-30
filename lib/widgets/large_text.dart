@@ -1,23 +1,14 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:dulich/constants/colors.dart';
 import 'package:flutter/material.dart';
 
-class LargeText extends StatelessWidget {
-  double size;
-  final String text;
+class LargeText extends Text {
+  final double size;
   final Color color;
-  LargeText({
-    Key? key,
+  LargeText(
+    super.data, {
+    super.key,
     this.size = 30,
-    required this.text,
-    this.color = Colors.black,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      text,
-      style:
-          TextStyle(color: color, fontSize: size, fontWeight: FontWeight.bold),
-    );
-  }
+    this.color = AppColors.main,
+  }) : super(style: TextStyle(color: color, fontSize: size));
 }

@@ -36,8 +36,8 @@ class BorderRadiusConfig {
 }
 
 class ResponsiveButton extends StatelessWidget {
-  ResponsiveButtonConfigs configs;
-  ResponsiveButton({
+  final ResponsiveButtonConfigs configs;
+  const ResponsiveButton({
     Key? key,
     required this.configs,
   }) : super(key: key);
@@ -48,11 +48,11 @@ class ResponsiveButton extends StatelessWidget {
       width: configs.width,
       height: configs.height,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(5), color: AppColors.mainColor),
+          borderRadius: BorderRadius.circular(5), color: AppColors.main),
       child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
         if (configs.title != null) ...[
           NormalText(
-            text: configs.title!,
+            configs.title!,
             color: configs.titleColor ?? AppColors.white,
           )
         ] else

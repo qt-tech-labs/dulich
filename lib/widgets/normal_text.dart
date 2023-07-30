@@ -1,22 +1,15 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:dulich/constants/colors.dart';
 import 'package:flutter/material.dart';
 
-class NormalText extends StatelessWidget {
+class NormalText extends Text {
   final double size;
-  final String text;
   final Color color;
-  const NormalText({
-    Key? key,
-    this.size = 16,
-    required this.text,
-    this.color = Colors.black54,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      text,
-      style: TextStyle(color: color, fontSize: size),
-    );
-  }
+  NormalText(super.data,
+      {super.key,
+      this.size = 16,
+      this.color = AppColors.gray,
+      FontWeight fontWeight = FontWeight.w600})
+      : super(
+            style: TextStyle(
+                color: color, fontSize: size, fontWeight: fontWeight));
 }

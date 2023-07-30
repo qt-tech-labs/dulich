@@ -41,9 +41,9 @@ class __SplashState extends State<Splash> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          LargeText(text: Strings.splash.travel),
+                          LargeText(Strings.splash.travel),
                           NormalText(
-                            text: Strings.splash.adventure,
+                            Strings.splash.adventure,
                             size: 30,
                           ),
                           const SizedBox(
@@ -52,9 +52,10 @@ class __SplashState extends State<Splash> {
                           SizedBox(
                             width: 250,
                             child: NormalText(
-                                color: AppColors.textColor2,
-                                size: 14,
-                                text: Strings.splash.quote),
+                              Strings.splash.quote,
+                              color: AppColors.text2,
+                              size: 14,
+                            ),
                           ),
                           const SizedBox(
                             height: 30,
@@ -72,8 +73,8 @@ class __SplashState extends State<Splash> {
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(8),
                                 color: index == dotIndex
-                                    ? AppColors.mainColor
-                                    : AppColors.textColor1),
+                                    ? AppColors.main
+                                    : AppColors.text1),
                           );
                         }),
                       )

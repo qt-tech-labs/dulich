@@ -12,9 +12,14 @@ buildscript {
 }
 
 allprojects {
+
     repositories {
         google()
         mavenCentral()
+        maven {
+            url 'http://download.flutter.io'
+            allowInsecureProtocol = true
+        }
     }
 }
 

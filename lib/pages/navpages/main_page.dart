@@ -29,8 +29,8 @@ class _MainPageState extends State<MainPage> {
       body: pages[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: currentIndex,
-          selectedItemColor: AppColors.mainColor,
-          unselectedItemColor: Colors.grey,
+          selectedItemColor: AppColors.main,
+          unselectedItemColor: AppColors.gray,
           showSelectedLabels: false,
           showUnselectedLabels: false,
           selectedLabelStyle: const TextStyle(
