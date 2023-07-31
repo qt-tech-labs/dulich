@@ -10,12 +10,12 @@ class AppConstraints {
   static const EdgeInsets padding1 = EdgeInsets.all(1);
   static const EdgeInsets padding = EdgeInsets.all(0);
   static SpaceLeft left = SpaceLeft();
-  static EdgeInsets mx({double space = 0}) {
-    return EdgeInsets.only(left: space, right: space);
+  static EdgeInsets mx(double? space) {
+    return EdgeInsets.only(left: space ?? 0, right: space ?? 0);
   }
 
-  static EdgeInsets my({double space = 0}) {
-    return EdgeInsets.only(top: space, bottom: space);
+  static EdgeInsets my(double? space) {
+    return EdgeInsets.only(top: space ?? 0, bottom: space ?? 0);
   }
 }
 

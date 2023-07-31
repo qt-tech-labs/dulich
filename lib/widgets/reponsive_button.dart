@@ -49,16 +49,18 @@ class ResponsiveButton extends StatelessWidget {
       height: configs.height,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5), color: AppColors.main),
-      child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-        if (configs.title != null) ...[
-          NormalText(
-            configs.title!,
-            color: configs.titleColor ?? AppColors.white,
-          )
-        ] else
-          ...[],
-        configs.icon ?? Image.asset("img/button-one.png")
-      ]),
+      child: Flexible(
+        child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+          if (configs.title != null) ...[
+            NormalText(
+              configs.title!,
+              color: configs.titleColor ?? AppColors.white,
+            )
+          ] else
+            ...[],
+          configs.icon ?? Image.asset("img/button-one.png")
+        ]),
+      ),
     );
   }
 }

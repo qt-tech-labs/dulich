@@ -5,14 +5,14 @@ import 'package:dulich/widgets/normal_text.dart';
 import 'package:dulich/widgets/reponsive_button.dart';
 import 'package:flutter/material.dart';
 
-class Splash extends StatefulWidget {
-  const Splash({super.key});
+class SplashPage extends StatefulWidget {
+  const SplashPage({super.key});
 
   @override
-  State<Splash> createState() => __SplashState();
+  State<SplashPage> createState() => __SplashState();
 }
 
-class __SplashState extends State<Splash> {
+class __SplashState extends State<SplashPage> {
   List images = [
     "welcome-one.png",
     "welcome-two.png",

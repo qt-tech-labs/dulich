@@ -6,14 +6,14 @@ import 'package:dulich/widgets/normal_text.dart';
 import 'package:dulich/widgets/rect_button.dart';
 import 'package:flutter/material.dart';
 
-class Detail extends StatefulWidget {
-  const Detail({super.key});
+class DetailPage extends StatefulWidget {
+  const DetailPage({super.key});
 
   @override
-  State<Detail> createState() => _DetailState();
+  State<DetailPage> createState() => _DetailPageState();
 }
 
-class _DetailState extends State<Detail> {
+class _DetailPageState extends State<DetailPage> {
   var ratedStar = 3;
   var indexPeople = 0;
   var liked = false;
@@ -30,7 +30,7 @@ class _DetailState extends State<Detail> {
       var rateChanged = (scrollController.offset / 150) * max;
       var changed = max - rateChanged;
       if (inRange) {
-        if (changed >= 30) {
+        if (changed >= 100) {
           if (last < scrollController.offset) {
             // scroll up
             setState(() {
@@ -160,7 +160,7 @@ class _DetailState extends State<Detail> {
                               itemCount: 5,
                               itemBuilder: ((context, index) {
                                 return Container(
-                                  margin: AppConstraints.mx(space: 5),
+                                  margin: AppConstraints.mx(5),
                                   child: RectButton(
                                     borderColor: index == indexPeople
                                         ? AppColors.main
@@ -223,7 +223,7 @@ class _DetailState extends State<Detail> {
               minimumSize: const Size.fromHeight(50),
               child: Container(
                 width: double.maxFinite,
-                padding: AppConstraints.mx(space: 20),
+                padding: AppConstraints.mx(20),
                 child: Row(
                   children: [
                     NormalText(

@@ -2,21 +2,21 @@ import 'package:dulich/constants/colors.dart';
 import 'package:dulich/constants/constraints.dart';
 import 'package:dulich/constants/string.dart';
 import 'package:dulich/constants/styles.dart';
-import 'package:dulich/pages/detail.dart';
+import 'package:dulich/pages/detail_page.dart';
 import 'package:dulich/widgets/large_text.dart';
 import 'package:dulich/widgets/normal_text.dart';
 import 'package:flutter/material.dart';
 
 import '../../widgets/circle_image.dart';
 
-class Home extends StatefulWidget {
-  const Home({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
-  State<Home> createState() => _HomeState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _HomeState extends State<Home> with TickerProviderStateMixin {
+class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   late final TabController _tabController;
 
   @override
@@ -111,7 +111,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
           height: 20,
         ),
         Container(
-          margin: const EdgeInsets.only(left: 20, right: 20),
+          margin: AppConstraints.mx(20),
           child: Row(
             children: [
               LargeText(
@@ -140,7 +140,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const Detail()))
+                              builder: (context) => const DetailPage()))
                     },
                     child: Column(
                       children: [

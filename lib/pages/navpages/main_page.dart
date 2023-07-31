@@ -1,8 +1,8 @@
 import 'package:dulich/constants/colors.dart';
 import 'package:dulich/constants/page_index.dart';
-import 'package:dulich/pages/navpages/activity.dart';
-import 'package:dulich/pages/navpages/discover.dart';
-import 'package:dulich/pages/navpages/home.dart';
+import 'package:dulich/pages/navpages/activity_page.dart';
+import 'package:dulich/pages/navpages/discover_page.dart';
+import 'package:dulich/pages/navpages/home_page.dart';
 import 'package:dulich/pages/navpages/profile.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +14,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  var pages = [Home(), const Activity(), Discover(), Profile()];
+  var pages = [HomePage(), const Activity(), Discover(), Profile()];
 
   int currentIndex = 0;
   void onTap(int index) {
